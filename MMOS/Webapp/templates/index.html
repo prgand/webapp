@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='/images/favicon.png') }}" />
+
+  <title>
+    Moja osobna stranica
+  </title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='stil.css') }}" />
+</head>
+
+<body>
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#vjestine" class="nav__link">Vještine</a></li>
+          <li class="nav__item"><a href="#omeni" class="nav__link">O meni</a></li>
+          </li>
+          <li class="nav__item">
+            <a href="#kontakt" class="nav__link">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <span>Andreas Prgić</span>
+        </h1>
+        <p>Student 3.godine preddiplomskog studija na Fakultetu informatike i digitalnih tehnologija.</p>
+        <a href="#kontakt" class="btn btn--pink">Kontaktirajte me</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+
+    <section class="vjestine" id="vjestine">
+      <div class="row">
+        <h2>Vještine</h2>
+        <div class="vjestine_boxes">
+
+
+          <div class="vjestine__box">
+            <div class="vjestine__text">
+              <h3>Programiranje</h3>
+              <p>
+                Trenutno sam u fazi učenja nekoliko programskih jezika.
+              </p>
+              <ul class="vjestine__list">
+                <li>C#</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+              </ul>
+
+            </div>
+            <div class="vjestine__image-box">
+              <img src="{{ url_for('static', filename='/images/programiranje.jpg') }}" class="vjestine__image" alt="Projekt 1" />
+            </div>
+          </div>
+
+          <div class="vjestine__box">
+            <div class="vjestine__text">
+              <h3>Web-dizajn</h3>
+              <p>
+                Što se tiče web-dizajna, također sam u fazi učenja određenih dijelova tog područja poput:
+              </p>
+              <ul class="vjestine__list">
+                <li>Bootstrap</li>
+                <li>Adobe XD</li>
+                <li>Sketch</li>
+              </ul>
+            </div>
+            <div class="vjestine__image-box">
+              <img src="{{ url_for('static', filename='images/web_dizajn.jpeg') }}" class="vjestine__image" alt="Projekt 2" />
+            </div>
+          </div>
+    </section>
+
+
+
+    <section class="omeni" id="omeni">
+      <div class="row">
+        <h2>O meni</h2>
+        <div class="omeni__content">
+          <div class="omeni__text">
+            <p>
+              Student 3. godine informatike, posvećen učenju i razvijanju vještina potrebnih za karijeru u području informatike.
+              Redovno pohađam predavanja i vježbe svih kolegija.
+              Odrađujem sve zadatke koji mi se zadaju zbog iskustva kojeg imam iz prošlih poslova, iako nemam iskustvo
+              u informatičkoj struci.
+              Uspijevam u okruženjima suradnje, cijenim timski rad i iskorištavam ga za postizanje zajedničkih ciljeva.
+          </p>
+          <p>
+              U slobodno vrijeme aktivno se bavim nogometom, koristeći ga kao način za opuštanje i održavanje balansa između fakulteta i fizičke aktivnosti.
+              Osim toga, posvećen sam radu na sebi te nastojim razvijati vještine programiranja kako bih obogatio svoje iskustvo.
+          </p>
+          <p>
+              Moji ciljevi uključuju uspješan završetak preddiplomskog studija, stjecanje naprednih vještina programiranja, te izgradnju karijere u informatičkoj struci.
+            </p>
+
+          </div>
+
+          <div class="omeni__photo-container">
+            <img class="omeni__photo" src="{{ url_for('static', filename='/images/andreas.jpg') }}" alt="andreas" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <section class="kontakt" id="kontakt">
+    <div class="row">
+      <h2>Kontakt</h2>
+      <div class="kontakt__info">
+        <p>
+          Trebate stupiti u kontakt? Slobodno mi se obratite za bilo kakav upit, 
+          suradnju ili samo da me pozdravite! 
+          Uvijek sam otvoren za povezivanje i razgovor o uzbudljivim prilikama.
+        </p>
+        <a id="contact" href="" class="btn">Pošaljite mi mail</a>
+      </div>
+    </div>
+  </section>
+
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://twitter.com/andreasprgic11/" title="Link za X(nekadašnji Twitter) profil">
+            <img src="{{ url_for('static', filename='/images/twitter.svg') }}" class="footer__social-image" alt="X/Twitter">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.facebook.com/andreas.prgic1" title="Link za Facebook profil">
+            <img src="{{ url_for('static', filename='/images/facebook.svg') }}" class="footer__social-image" alt="Facebook">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+            <a href="https://www.instagram.com/andreas_prgic/" title="Link za Instagram profil">
+              <img src="{{ url_for('static', filename='/images/instagram.png') }}" class="footer__social-image" alt="Facebook">
+            </a>
+          </li>
+      </ul>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="{{ url_for('static', filename='/images/arrow-up.svg') }}" alt="Nazad na vrh" class="navrh"/>
+  </a>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
