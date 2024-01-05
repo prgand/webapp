@@ -93,7 +93,7 @@ Potrebno je napraviti web aplikaciju (u ovom slučaju web stranicu) koristeći b
 
 Uključivanje slike izgleda ovako:
 
-<img src="{{ url_for('static', filename='/images/nazivslike.ekstenzija') }}"  />
+/* <img src="{{ url_for('static', filename='/images/nazivslike.ekstenzija') }}"  /> */
 
 Uključivanje JavaScript-a u HTML dokument:
 
